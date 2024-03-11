@@ -5,14 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos de Física - Docente Federico Valentín</title>
     <style>
-        .animation-container {
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #343a40;
+            color: #fff;
             text-align: center;
-            margin-bottom: 20px;
+            padding: 20px 0;
+        }
+        .title {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 1.2em;
         }
         .courses-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .course {
             margin-bottom: 10px;
@@ -21,27 +38,41 @@
             display: inline-block;
             padding: 10px 20px;
             text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            border: 2px solid #007bff;
+            color: #343a40;
+            background-color: #fff;
+            border: 2px solid #343a40;
             border-radius: 5px;
             transition: all 0.3s ease;
+            font-weight: bold;
         }
         .course a:hover {
-            transform: scale(1.1);
-            background-color: #0056b3;
-            border-color: #0056b3;
+            background-color: #343a40;
+            color: #fff;
         }
         .timestamp {
             font-size: 12px;
             color: #888;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.5em;
+            }
+            .subtitle {
+                font-size: 1em;
+            }
+            .courses-container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="animation-container">
-        <h1>Cursos de Física</h1>
-        <p>Docente: Federico Valentín</p>
+    <div class="header">
+        <h1 class="title">Cursos de Física</h1>
+        <p class="subtitle">Docente: Federico Valentín</p>
     </div>
 
     <div class="courses-container">
