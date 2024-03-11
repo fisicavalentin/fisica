@@ -32,6 +32,10 @@
             background-color: #0056b3;
             border-color: #0056b3;
         }
+        .timestamp {
+            font-size: 12px;
+            color: #888;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +62,22 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="timestamp">
+        Publicado: <span id="publication-time"></span>
+    </div>
+
+    <script>
+        // Obtener el elemento de la marca de tiempo
+        var publicationTimeElement = document.getElementById('publication-time');
+
+        // Obtener la fecha y hora actual
+        var currentDate = new Date();
+
+        // Formatear la fecha y hora como "dd/mm/aaaa hh:mm:ss"
+        var formattedDateTime = currentDate.toLocaleString('es-ES');
+
+        // Establecer el texto de la marca de tiempo
+        publicationTimeElement.textContent = formattedDateTime;
+    </script>
 </body>
 </html>
