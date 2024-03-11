@@ -1,73 +1,17 @@
+
+Aquí tienes el código dividido en tres archivos independientes: un archivo HTML, un archivo CSS y un archivo JavaScript.
+
+HTML (index.html):
+
+html
+Copy code
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos de Física - Docente Federico Valentín</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        .header {
-            background-color: #343a40;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .title {
-            font-size: 2em;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .subtitle {
-            font-size: 1.2em;
-        }
-        .courses-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .course {
-            margin-bottom: 10px;
-        }
-        .course a {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #343a40;
-            background-color: #fff;
-            border: 2px solid #343a40;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-        .course a:hover {
-            background-color: #343a40;
-            color: #fff;
-        }
-        .timestamp {
-            font-size: 12px;
-            color: #888;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .title {
-                font-size: 1.5em;
-            }
-            .subtitle {
-                font-size: 1em;
-            }
-            .courses-container {
-                padding: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
@@ -94,8 +38,9 @@
     </div>
 
     <div class="firma">
-        Publicado: <p>"2024 - Federico Valentín"</p>
+        <p>"2024 - Federico Valentín"</p>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
