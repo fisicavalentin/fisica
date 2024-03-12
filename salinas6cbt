@@ -9,11 +9,19 @@
 <body>
     <div class="header">
         <h1 class="title">Salinas 1: 6° CB</h1>
-        <p class="subtitle">Federico Valentín</p>
-    </div>
+</div>
 
     <div class="content-container">
-        <h2>Materiales del curso teórico: </h2>
+        <h2>Repartidos de ejercicios: </h2>
+        <ul>
+            <li><a href="https://drive.google.com/document/d/ejercicios_curso1">Ejercicios del curso</a></li>
+            <li><a href="https://drive.google.com/document/d/materiales_curso1">Materiales del curso</a></li>
+            <li><a href="https://drive.google.com/document/d/protocolos_curso1">Protocolos prácticos del curso</a></li>
+            <!-- Agrega más enlaces relevantes según sea necesario -->
+        </ul>
+    </div>
+     <div class="content-container">
+        <h2>Textos: </h2>
         <ul>
             <li><a href="https://drive.google.com/document/d/ejercicios_curso1">Ejercicios del curso</a></li>
             <li><a href="https://drive.google.com/document/d/materiales_curso1">Materiales del curso</a></li>
