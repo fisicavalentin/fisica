@@ -85,3 +85,6 @@ li {
     margin-bottom: 10px;
     display: inline-block; /* Para que los elementos de lista se muestren en línea */
 }
+.hidden {
+    display: none; /* Oculta el contenido por defecto */
+}
