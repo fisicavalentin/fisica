@@ -3,31 +3,38 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    text-align: center; /* Centra todo el contenido */
 }
+
 .header {
     background-color: #343a40;
     color: #fff;
-    text-align: center;
     padding: 20px 0;
 }
+
 .title {
     font-size: 2em;
     margin-bottom: 10px;
     font-weight: bold;
 }
+
 .subtitle {
     font-size: 1.2em;
 }
+
 .courses-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
+
 .course {
     margin-bottom: 10px;
 }
-.course a {
+
+.course a,
+li a { /* Estilo común para enlaces */
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
@@ -38,28 +45,23 @@ body {
     transition: all 0.3s ease;
     font-weight: bold;
 }
-.course a:hover {
+
+.course a:hover,
+li a:hover { /* Estilo común para enlaces al pasar el mouse */
     background-color: #343a40;
     color: #fff;
 }
-.firma {
-    font-size: 12px;
-    color: #888;
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
     text-align: center;
-    margin-top: 20px;
+    padding: 10px 0;
 }
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #343a40;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-
 
 @media (max-width: 768px) {
     .title {
@@ -72,28 +74,12 @@ body {
         padding: 10px;
     }
 }
-  ul {
-            list-style: none;
-            padding: 0;
-        }
 
-        li {
-            margin-bottom: 10px;
-        }
+ul {
+    list-style: none;
+    padding: 0;
+}
 
-        li a {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #343a40;
-            background-color: #fff;
-            border: 2px solid #343a40;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        li a:hover {
-            background-color: #343a40;
-            color: #fff;
-        }
+li {
+    margin-bottom: 10px;
+}
