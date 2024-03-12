@@ -78,8 +78,10 @@ li a:hover { /* Estilo común para enlaces al pasar el mouse */
 ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* Centrar elementos de lista */
 }
 
 li {
     margin-bottom: 10px;
+    display: inline-block; /* Para que los elementos de lista se muestren en línea */
 }
