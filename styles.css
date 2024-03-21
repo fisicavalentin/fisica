@@ -21,17 +21,6 @@ body {
 .subtitle {
     font-size: 1.2em;
 }
-        /* Estilos para el párrafo p */
-        .header .subtitle {
-            color: #666; /* Color del texto */
-            margin: 0; /* Elimina el margen */
-            padding: 0; /* Elimina el relleno */
-        }
-        /* Estilos para el enlace h1 */
-        .header .title a {
-            color: inherit; /* Hereda el color del texto */
-            text-decoration: none; /* Sin subrayado */
-        }
 
 .courses-container {
     display: flex;
