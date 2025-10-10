@@ -6,38 +6,6 @@
   <title>Teórico</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="icons8-learning-ios-17-filled-32.png" type="image/x-icon">
-
-  <style>
-    /* Estilos del botón */
-    #mostrarVideoBtn {
-      display: inline-block;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    #mostrarVideoBtn:hover {
-      background-color: #0056b3;
-    }
-
-    /* Contenedor del video (oculto por defecto) */
-    #videoContainer {
-      display: none;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    iframe {
-      width: 560px;
-      height: 315px;
-      max-width: 90%;
-      border-radius: 12px;
-    }
-  </style>
 </head>
 <body>
   <div class="header">
@@ -54,16 +22,17 @@
       <li><a href="https://drive.google.com/file/d/1sDhO8jweuv_nly_BytK_DrIWj0tsbi3K/view?usp=drive_link">Guía de armado de un Póster</a></li>
     </ul>
 
-    <!-- 🔘 Botón para mostrar el video -->
-    <button id="mostrarVideoBtn">Ver video explicativo</button>
+    <!-- 🔘 Botón que usa tu estilo existente -->
+    <button id="mostrarVideoBtn" class="btn">Ver video explicativo</button>
 
-    <!-- 🎥 Contenedor del video (oculto al principio) -->
-    <div id="videoContainer">
+    <!-- 🎥 Contenedor del video (inicialmente oculto) -->
+    <div id="videoContainer" style="display: none; text-align: center; margin-top: 1em;">
       <iframe 
         src="https://www.youtube.com/embed/Y_AKLMp5Pd4?si=f3zjl8_aE0pH66nZ"
         title="YouTube video player"
         frameborder="0"
-        allowfullscreen>
+        allowfullscreen
+        style="max-width: 90%; width: 560px; height: 315px; border-radius: 8px;">
       </iframe>
     </div>
 
@@ -75,18 +44,14 @@
   </div>
 
   <script>
-    // Mostrar u ocultar el video cuando se hace clic en el botón
+    // Mostrar u ocultar el video sin alterar tu estilo existente
     const boton = document.getElementById('mostrarVideoBtn');
     const video = document.getElementById('videoContainer');
 
     boton.addEventListener('click', () => {
-      if (video.style.display === 'none') {
-        video.style.display = 'block';
-        boton.textContent = 'Ocultar video';
-      } else {
-        video.style.display = 'none';
-        boton.textContent = 'Ver video explicativo';
-      }
+      const visible = video.style.display === 'block';
+      video.style.display = visible ? 'none' : 'block';
+      boton.textContent = visible ? 'Ver video explicativo' : 'Ocultar video';
     });
   </script>
 </body>
