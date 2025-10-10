@@ -1,41 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="icons8-learning-ios-17-filled-32.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teórico</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icons8-learning-ios-17-filled-32.png" type="image/x-icon">
 
+  <style>
+    /* Estilos del botón */
+    #mostrarVideoBtn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #mostrarVideoBtn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Contenedor del video (oculto por defecto) */
+    #videoContainer {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 560px;
+      height: 315px;
+      max-width: 90%;
+      border-radius: 12px;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="header">
-        <h1 class="title">Proyecto</h1>
-        <p class="subtitle">3° CVH</p>
+  <div class="header">
+    <h1 class="title">Proyecto</h1>
+    <p class="subtitle">3° CVH</p>
+  </div>
+
+  <div class="content-container">
+    <br><br>
+    <h2>Elaboración de un Póster Cienífico</h2>
+    <ul>
+      <li><a href="https://drive.google.com/file/d/1jYPaC4mHjrpNQen7E1h67S7B-ugZuoGz/view?usp=drive_link">Propuesta de trabajo</a></li>
+      <li><a href="https://drive.google.com/file/d/1p-brFVqKfmE__IOdQLu8PjYGytp8rowE/view?usp=drive_link">Metodología de la Investigación</a></li>
+      <li><a href="https://drive.google.com/file/d/1sDhO8jweuv_nly_BytK_DrIWj0tsbi3K/view?usp=drive_link">Guía de armado de un Póster</a></li>
+    </ul>
+
+    <!-- 🔘 Botón para mostrar el video -->
+    <button id="mostrarVideoBtn">Ver video explicativo</button>
+
+    <!-- 🎥 Contenedor del video (oculto al principio) -->
+    <div id="videoContainer">
+      <iframe 
+        src="https://www.youtube.com/embed/Y_AKLMp5Pd4?si=f3zjl8_aE0pH66nZ"
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
     </div>
-    <div class="content-container">
-        <br> <br>
-        <h2>Elaboración de un Póster Cienífico</h2>
-        <ul>
-            <li><a href="https://drive.google.com/file/d/1jYPaC4mHjrpNQen7E1h67S7B-ugZuoGz/view?usp=drive_link">Propuesta de trabajo</a></li>
-            <li><a href="https://drive.google.com/file/d/1p-brFVqKfmE__IOdQLu8PjYGytp8rowE/view?usp=drive_link">Metodología de la Investigación</a></li>
-            <li><a href="https://drive.google.com/file/d/1sDhO8jweuv_nly_BytK_DrIWj0tsbi3K/view?usp=drive_link">Guía de armado de un Póster</a></li>
 
-
-            
-            
-        </ul>
-   
-        <br>
+    <br>
 
     <div class="footer">
-        <p class="firma"> 2025 Prof. Federico Valentín</p>
+      <p class="firma">2025 Prof. Federico Valentín</p>
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <script>
+    // Mostrar u ocultar el video cuando se hace clic en el botón
+    const boton = document.getElementById('mostrarVideoBtn');
+    const video = document.getElementById('videoContainer');
+
+    boton.addEventListener('click', () => {
+      if (video.style.display === 'none') {
+        video.style.display = 'block';
+        boton.textContent = 'Ocultar video';
+      } else {
+        video.style.display = 'none';
+        boton.textContent = 'Ver video explicativo';
+      }
+    });
+  </script>
 </body>
-
 </html>
-
-
