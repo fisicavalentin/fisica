@@ -20,12 +20,12 @@
       <li><a href="https://drive.google.com/file/d/1jYPaC4mHjrpNQen7E1h67S7B-ugZuoGz/view?usp=drive_link">Propuesta de trabajo</a></li>
       <li><a href="https://drive.google.com/file/d/1p-brFVqKfmE__IOdQLu8PjYGytp8rowE/view?usp=drive_link">Metodología de la Investigación</a></li>
       <li><a href="https://drive.google.com/file/d/1sDhO8jweuv_nly_BytK_DrIWj0tsbi3K/view?usp=drive_link">Guía de armado de un Póster</a></li>
+
+      <!-- 🔘 Nuevo “botón” (enlace estilizado como los demás) -->
+      <li><a href="#" id="mostrarVideoLink">Ver video explicativo</a></li>
     </ul>
 
-    <!-- 🔘 Botón que usa tu estilo existente -->
-    <button id="mostrarVideoBtn" class="btn">Ver video explicativo</button>
-
-    <!-- 🎥 Contenedor del video (inicialmente oculto) -->
+    <!-- 🎥 Contenedor del video (oculto al principio) -->
     <div id="videoContainer" style="display: none; text-align: center; margin-top: 1em;">
       <iframe 
         src="https://www.youtube.com/embed/Y_AKLMp5Pd4?si=f3zjl8_aE0pH66nZ"
@@ -44,15 +44,17 @@
   </div>
 
   <script>
-    // Mostrar u ocultar el video sin alterar tu estilo existente
-    const boton = document.getElementById('mostrarVideoBtn');
+    // Script para mostrar u ocultar el video sin romper estilos
+    const enlace = document.getElementById('mostrarVideoLink');
     const video = document.getElementById('videoContainer');
 
-    boton.addEventListener('click', () => {
+    enlace.addEventListener('click', (event) => {
+      event.preventDefault(); // evita que el enlace recargue la página
       const visible = video.style.display === 'block';
       video.style.display = visible ? 'none' : 'block';
-      boton.textContent = visible ? 'Ver video explicativo' : 'Ocultar video';
+      enlace.textContent = visible ? 'Ver video explicativo' : 'Ocultar video';
     });
   </script>
 </body>
 </html>
+
